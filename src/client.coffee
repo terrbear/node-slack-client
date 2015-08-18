@@ -492,6 +492,21 @@ class Client extends EventEmitter
       when 'star_removed'
           @emit 'star_removed', message
 
+      when 'pin_added'
+          @emit 'pin_added', message
+
+      when 'pin_removed'
+          @emit 'pin_removed', message
+
+      when 'file_created'
+          @emit 'file_created', message
+
+      when 'file_shared'
+          @emit 'file_shared', message
+
+      when 'file_deleted'
+          @emit 'file_deleted', message
+
       else
         if message.reply_to
           if message.type == 'pong'
